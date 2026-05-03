@@ -3,7 +3,7 @@
 
 ---
 
-### 1. In which OSI layer does Wi-Fi operate?
+### 1. In which OSL layer the Wi-Fi standard/protocol fits.
 
 Wi-Fi mainly works in:
 - **Layer 1 (Physical Layer)** → handles signals, frequency (2.4GHz / 5GHz), transmission
@@ -13,7 +13,7 @@ So basically, Wi-Fi = Physical + Data Link layers.
 
 ---
 
-### 2. Devices I use & their Wi-Fi capabilities
+### 2. Can you share the Wi-Fi devices that you are using day to day life, share that device's wireless capability/properties after connecting to network. Match your device to corresponding Wi-Fi Generations based on properties
 
 Here are some of my daily devices:
 
@@ -28,7 +28,7 @@ Newer devices support dual-band and higher speeds. Older ones mostly stick to 2.
 
 ---
 
-### 3. What is BSS and ESS?
+### 3. what is BSS and ESS?
 
 - **BSS (Basic Service Set):**  
   One access point + connected devices  
@@ -40,7 +40,7 @@ Newer devices support dual-band and higher speeds. Older ones mostly stick to 2.
 
 ---
 
-### 4. Basic functionalities of a Wi-Fi Access Point
+### 4. what are the basic functionalities of Wi-Fi Accesspoint
 
 - Provides wireless connectivity  
 - Assigns IP address (via DHCP usually)  
@@ -52,7 +52,7 @@ It acts as a bridge between wireless devices and internet.
 
 ---
 
-### 5. Bridge mode vs Repeater mode
+### 5. Difference between Bridge mode and Repeater mode
 
 | Feature | Bridge Mode | Repeater Mode |
 |--------|------------|--------------|
@@ -63,7 +63,7 @@ It acts as a bridge between wireless devices and internet.
 
 ---
 
-### 6. Difference between 802.11a and 802.11b
+### 6. what are the differences between 802.11a and 802.11b.
 
 | Feature | 802.11a | 802.11b |
 |--------|--------|--------|
@@ -74,13 +74,18 @@ It acts as a bridge between wireless devices and internet.
 
 ---
 
-### 7. 2.4GHz vs 5GHz practical observation
+### 7. Configure your modem/hotspot to operate only in 2.4Ghz and connect your laptop/Wi-Fi device , and capture the capability/properties in your Wi-Fi device. Repeat the same in 5Ghz and tabulate all the differences you observed during this
 
-> *(Configure hotspot and test — fill below after your experiment)*
+#### Setup:
+- 2.4GHz config:
+<img width="900" height="682" alt="2 4" src="https://github.com/user-attachments/assets/8979359b-507f-4816-a103-988979993d97" />
 
-#### Setup Screenshots:
-- 2.4GHz config: `[UPLOAD_IMAGE_HERE]`
-- 5GHz config: `[UPLOAD_IMAGE_HERE]`
+ <img width="801" height="500" alt="5_1" src="https://github.com/user-attachments/assets/9df318d8-8565-49d3-8b89-58d97ea070b9" />
+
+- 5GHz config:
+  <img width="902" height="680" alt="5" src="https://github.com/user-attachments/assets/88f304c4-f449-4b37-970a-8a40d29f41c3" />
+
+<img width="776" height="462" alt="2 4_1" src="https://github.com/user-attachments/assets/bf9606c0-562e-4e51-8881-17a5d5726f8b" />
 
 #### Observations:
 
@@ -97,7 +102,7 @@ It acts as a bridge between wireless devices and internet.
 
 ---
 
-### 8. Difference between IEEE and WFA
+### 8. What is the difference between IEEE and WFA
 
 - **IEEE (Institute of Electrical and Electronics Engineers):**  
   Defines standards (like 802.11)
@@ -111,22 +116,32 @@ Simple:
 
 ---
 
-### 9. Wi-Fi backhaul in my environment
+### 9. List down the type of Wi-Fi internet connectivity backhaul, share your home/college's wireless internet connectivity backhaul name and its properties
 
-**Type:** Fiber Broadband (example: Airtel/Jio)  
-**Backhaul:** Fiber optic  
+**Type:** Cable Broadband  
+**Provider:** Hathway  
+**Backhaul:** Hybrid Fiber-Coaxial (HFC)
 
 #### Properties:
-- High speed (100 Mbps – 1 Gbps)
-- Low latency  
-- Stable connection  
-- Supports multiple devices  
+- Moderate to high speed (typically 50 Mbps – 300 Mbps depending on plan)
+- Latency is low to moderate  
+- Uses fiber till local node + coaxial cable to home  
+- Performance may vary during peak usage time  
+- Supports multiple devices (phones, laptop, TV, IoT devices)
 
-**Usage:** Home + college usage for streaming, coding, IoT projects.
+#### Usage:
+Used for:
+- Online classes / browsing  
+- Streaming (YouTube, OTT)  
+- Coding and project work  
+- IoT applications (ESP32 web server, dashboards)
+
+#### Observation:
+Connection is generally stable, but speed fluctuation can happen during peak hours compared to full fiber (FTTH) connections.
 
 ---
 
-### 10. Wi-Fi topologies & use cases
+### 10. List down the Wi-Fi topologies and use cases of each one.
 
 | Topology | Description | Use Case |
 |---------|------------|----------|
@@ -134,9 +149,5 @@ Simple:
 | Ad-hoc Mode | Device-to-device | File sharing |
 | Mesh Network | Multiple APs connected | Large buildings |
 | Point-to-Point | Direct link | Building-to-building |
-
----
-
-- `[ADD SPEED TEST RESULTS IF ANY]`
 
 ---
