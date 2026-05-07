@@ -3,11 +3,11 @@
 
 ---
 
-### 1. In which OSL layer the Wi-Fi standard/protocol fits.
+### 1. In which OSI layer the Wi-Fi standard/protocol fits.
 
 Wi-Fi mainly works in:
-- **Layer 1 (Physical Layer)** → handles signals, frequency (2.4GHz / 5GHz), transmission
-- **Layer 2 (Data Link Layer)** → handles MAC addressing, frames, error detection  
+- **Layer 1 (Physical Layer)** → (PCLP, PMD) - handles signals, frequency (2.4GHz / 5GHz), transmission
+- **Layer 2 (Data Link Layer)** → (MAC, LLC) - handles MAC addressing, frames, error detection  
 
 So basically, Wi-Fi = Physical + Data Link layers.
 
@@ -28,27 +28,131 @@ Newer devices support dual-band and higher speeds. Older ones mostly stick to 2.
 
 ---
 
-### 3. what is BSS and ESS?
+## 3. What is BSS and ESS?
 
-- **BSS (Basic Service Set):**  
-  One access point + connected devices  
-  (like one Wi-Fi router in a room)
+# BSS (Basic Service Set)
 
-- **ESS (Extended Service Set):**  
-  Multiple access points connected together  
-  (like Wi-Fi across entire college campus)
+A **Basic Service Set (BSS)** is the **smallest building block of a Wi-Fi network**.  
+It consists of:
+
+- One **Access Point (AP)** → Wi-Fi router/base station
+- Multiple wireless devices (stations) connected to that AP:
+  - Laptop
+  - Mobile phone
+  - Tablet
+  - Printer
+
+### Simple Definition
+A BSS is a **single Wi-Fi coverage area created by one access point**.
+
+### Example
+- A Wi-Fi router inside a classroom
+- All students connected to that router
+- Together they form **one BSS**
+
+### Important Features of BSS
+- Uses only **one access point**
+- Devices communicate through the AP
+- Has limited coverage area
+- Each BSS has a unique identifier called **BSSID**
+  - Usually the MAC address of the AP
+- Suitable for small areas like:
+  - Homes
+  - Classrooms
+  - Small offices
+
+### Diagram
+
+          Laptop
+             |
+Phone ---- Access Point ---- Tablet
+             |
+          Printer
+
+Entire setup = One BSS
 
 ---
 
-### 4. what are the basic functionalities of Wi-Fi Accesspoint
+# ESS (Extended Service Set)
 
-- Provides wireless connectivity  
-- Assigns IP address (via DHCP usually)  
-- Handles authentication (password/security)  
-- Routes traffic to internet  
-- Manages multiple devices  
+An **Extended Service Set (ESS)** is formed when **multiple BSSs are connected together** through a wired network called the **Distribution System (DS)**. i.e, Multiple access points working together to provide one large Wi-Fi network.
 
-It acts as a bridge between wireless devices and internet.
+### Why ESS is Needed
+A single AP cannot cover large places such as:
+- College campus
+- Hospital
+- Airport
+- Large office building
+
+So multiple APs are installed in different locations.
+
+### How ESS Works
+- Each AP creates its own BSS
+- All APs are connected using:
+  - Ethernet cable
+  - Switch
+  - Network backbone
+- Usually all APs use:
+  - Same SSID (Wi-Fi name)
+  - Same password
+- Users can move between APs without disconnecting
+
+This movement is called **Roaming**.
+
+### Example
+In a college:
+- AP1 → Ground floor
+- AP2 → First floor
+- AP3 → Library
+
+All APs are connected together.
+
+This complete network is called an **ESS**.
+
+### Diagram
+
+   [AP1] ----\
+               \
+   [AP2] ------ Switch/Network ------ Internet
+               /
+   [AP3] ----/
+
+Each AP = One BSS  
+All connected APs together = ESS
+
+---
+
+# Difference Between BSS and ESS
+
+| Feature | BSS | ESS |
+|---|---|---|
+| Full Form | Basic Service Set | Extended Service Set |
+| Number of APs | One AP | Multiple APs |
+| Coverage Area | Small | Large |
+| Network Size | Limited | Extended |
+| Roaming Support | No | Yes |
+| Example | Home Wi-Fi | Campus Wi-Fi |
+| Structure | Single wireless cell | Multiple connected cells |
+
+---
+
+### 4. What are the basic functionalities of Wi-Fi Access point>
+
+# Basic Functionalities of a Wi-Fi Access Point
+
+A Wi-Fi Access Point (AP) is a networking device that connects wireless devices to a wired network and provides internet access.
+
+- Provides wireless connectivity to devices such as laptops, mobiles, and tablets through Wi-Fi signals.
+
+- Assigns IP addresses to connected devices using DHCP for communication within the network.
+
+- Handles authentication and security using passwords and protocols like WPA2/WPA3 to prevent unauthorized access.
+
+- Routes data traffic between wireless devices and the internet.
+
+- Manages multiple connected devices and controls network communication efficiently.
+
+Thus, a Wi-Fi Access Point acts as a bridge between wireless devices and the internet/network.
 
 ---
 
@@ -104,15 +208,18 @@ It acts as a bridge between wireless devices and internet.
 
 ### 8. What is the difference between IEEE and WFA
 
-- **IEEE (Institute of Electrical and Electronics Engineers):**  
-  Defines standards (like 802.11)
+# Difference Between IEEE and WFA
 
-- **WFA (Wi-Fi Alliance):**  
-  Certifies devices (ensures compatibility)
+| IEEE | WFA |
+|---|---|
+| Stands for Institute of Electrical and Electronics Engineers | Stands for Wi-Fi Alliance |
+| Develops and defines wireless communication standards | Certifies Wi-Fi devices for compatibility |
+| Creates standards such as IEEE 802.11 | Ensures devices follow IEEE standards properly |
+| Focuses on technical specifications and protocols | Focuses on interoperability and testing |
+| Defines how Wi-Fi technology should work | Ensures devices from different companies work together |
 
-Simple:
-- IEEE → creates rules  
-- WFA → checks if devices follow rules  
+- IEEE → Creates the rules and standards  
+- WFA → Tests and certifies devices based on those standards  
 
 ---
 
@@ -136,18 +243,19 @@ Used for:
 - Coding and project work  
 - IoT applications (ESP32 web server, dashboards)
 
-#### Observation:
-Connection is generally stable, but speed fluctuation can happen during peak hours compared to full fiber (FTTH) connections.
-
 ---
 
 ### 10. List down the Wi-Fi topologies and use cases of each one.
 
 | Topology | Description | Use Case |
-|---------|------------|----------|
-| Infrastructure Mode | Devices connect via AP | Home, office |
-| Ad-hoc Mode | Device-to-device | File sharing |
-| Mesh Network | Multiple APs connected | Large buildings |
-| Point-to-Point | Direct link | Building-to-building |
+|---|---|---|
+| Infrastructure Mode | Devices connect through an Access Point (AP) | Home, office, campus networks |
+| Ad-hoc Mode | Devices communicate directly without an AP | File sharing, temporary networks |
+| Mesh Network | Multiple APs interconnected to extend coverage | Large buildings, smart cities |
+| Point-to-Point Mode | Direct wireless link between two locations | Building-to-building communication |
+| Bridge Mode | Connects two wired networks wirelessly | Connecting LANs across buildings |
+| Repeater Mode | Receives and retransmits Wi-Fi signals to extend range | Expanding Wi-Fi coverage |
+| WGB (Workgroup Bridge) Mode | Connects wired devices to a wireless network through an AP | Connecting printers, switches, or IP cameras |
+| Mobile Hotspot Mode | Mobile device shares cellular internet through Wi-Fi | Internet sharing using smartphones |
 
 ---
