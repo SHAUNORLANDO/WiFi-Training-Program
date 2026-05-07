@@ -20,9 +20,6 @@ Some also include:
 - Authentication (verifying identity)
 - Authorization (granting access)
 
-Simple idea:
-Security = Protect data + Verify users + Ensure access
-
 ---
 
 ### 2. Explain the difference between authentication and encryption in WiFi security.
@@ -69,6 +66,13 @@ Both are required for secure communication.
 
 Summary:
 WEP < WPA < WPA2 < WPA3 (in terms of security)
+
+| Std  | Cipher (C) | Integrity (I) | Authentication (A) | Weakness |
+|------|-------------|----------------|---------------------|-----------|
+| WEP  | RC4 | CRC32 | Shared Key | Key reuse, IV weakness |
+| WPA  | RC4 + TKIP | MIC | Open Authentication + 4-Way Handshake | TKIP vulnerabilities, depends on password strength |
+| WPA2 | AES-CCMP | CBC-MAC | Open Authentication + 4-Way Handshake | More secure than WPA, but vulnerable to weak passwords |
+| WPA3 | AES-SAE | SHA | PMF + 4-Way Handshake | Most secure (currently) |
 
 ---
 
@@ -121,14 +125,16 @@ Purpose:
 - Ensures both client and AP share a common secret
 - Helps in generating session-specific encryption keys
 
-Simple flow:
-Password → PMK → PTK → Secure communication
+
+**Password → PMK → PTK → Secure communication**
 
 ---
 
 ### 7. How does the 4-way handshake ensure mutual authentication between the client and the access point?
 
 The 4-way handshake ensures both client and AP prove they have the same PMK.
+
+<img width="720" height="813" alt="image" src="https://github.com/user-attachments/assets/b4596193-92a1-43be-a8cf-5a57a1816629" />
 
 Process:
 - AP sends ANonce
