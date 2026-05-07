@@ -31,9 +31,7 @@ Speed improves mainly due to better modulation + MIMO + channel usage.
 - Less interference
 - More secure (hard to track)
 
-**Simple understanding:**  
-- DSSS → spread out  
-- FHSS → jump around  
+<img width="337" height="126" alt="image" src="https://github.com/user-attachments/assets/07a70a7b-391a-4039-bff3-ef0ee5e145c1" />
 
 ---
 
@@ -65,16 +63,37 @@ Higher modulation = more speed but needs better signal.
 
 **OFDM = Orthogonal Frequency Division Multiplexing**
 
-- Splits channel into smaller subcarriers  
-- Sends data in parallel  
+OFDM (Orthogonal Frequency Division Multiplexing) is a modulation technique used in Wireless LAN (WLAN) standards.
 
-#### Advantages:
-- Reduces interference  
-- Improves data rate  
-- Handles multipath fading  
+In OFDM, a wireless channel is divided into multiple smaller subcarriers, and data is transmitted in parallel through these subcarriers.
 
-Used in:
-- 802.11a/g/n/ac/ax  
+### Significance of OFDM in WLAN
+
+- Efficient utilization of available bandwidth  
+- Supports high-speed data transmission  
+- Improves reliability of wireless communication  
+- Reduces signal interference between subcarriers
+
+<img width="684" height="325" alt="image" src="https://github.com/user-attachments/assets/b0dd933b-22a2-4a0f-afaa-70cbe8c169af" />
+
+### How OFDM Improves Performance
+
+- Reduces the effect of interference and noise  
+- Handles multipath fading effectively  
+- Increases data transmission rate  
+- Improves spectral efficiency  
+- Provides stable communication in indoor environments
+
+### WLAN Standards Using OFDM
+
+OFDM is used in:
+- IEEE 802.11a  
+- IEEE 802.11g  
+- IEEE 802.11n  
+- IEEE 802.11ac  
+- IEEE 802.11ax
+
+Thus, OFDM improves WLAN performance by enabling high-speed, reliable, and interference-resistant wireless communication.
 
 ---
 
@@ -100,17 +119,32 @@ Used in:
 
 ### 6. What is the role of Guard Intervals in WLAN transmission? How does a short Guard Interval improve efficiency?
 
-Guard Interval prevents overlapping of signals.
+A Guard Interval (GI) is a small time gap inserted between transmitted symbols in WLAN communication.
 
-#### Types:
-- Normal GI: 800 ns  
-- Short GI: 400 ns  
+Its main purpose is to prevent overlapping of signals caused by multipath propagation and delay.
 
-#### Benefit of short GI:
-- More data transmitted  
-- Higher throughput  
+### Types of Guard Interval
 
-**But:** needs good signal quality.
+- Normal Guard Interval → 800 ns  
+- Short Guard Interval → 400 ns  
+
+### Role of Guard Interval
+
+- Prevents Inter Symbol Interference (ISI)  
+- Reduces the effect of multipath fading  
+- Improves reliability of wireless transmission  
+- Ensures accurate data reception
+
+### Short Guard Interval and Efficiency Improvement
+
+A Short Guard Interval reduces the waiting time between symbol transmissions.
+
+This improves efficiency by:
+- Increasing data transmission speed  
+- Improving throughput  
+- Allowing more data symbols to be transmitted in less time
+
+However, Short GI requires good signal quality and low interference for reliable communication.
 
 ---
 
@@ -120,26 +154,39 @@ Main components:
 
 - **Preamble** → synchronization  
 - **Header** → info about data rate, length  
-- **Payload** → actual data  
-
-**Simple flow:**
-Preamble → Header → Data
+- **Payload** → actual data
+  
+<img width="613" height="429" alt="image" src="https://github.com/user-attachments/assets/7c7a1207-eb1b-4549-a877-ce7cbb3997cf" />
 
 ---
 
 ### 8. What is the difference between OFDM and OFDMA?
 
+# Difference Between OFDM and OFDMA
+
 | Feature | OFDM | OFDMA |
-|--------|------|-------|
-| Users | Single user | Multiple users |
+|---|---|---|
+| Full Form | Orthogonal Frequency Division Multiplexing | Orthogonal Frequency Division Multiple Access |
+| Number of Users | Supports one user at a time | Supports multiple users simultaneously |
+| Channel Usage | Entire channel used by a single user | Channel divided among multiple users |
 | Efficiency | Moderate | High |
-| Used in | Wi-Fi 4/5 | Wi-Fi 6 |
+| Latency | Higher | Lower |
+| Performance in Crowded Networks | Less efficient | More efficient |
+| Used In | Wi-Fi 4 and Wi-Fi 5 | Wi-Fi 6 and later |
 
-**Simple:**  
-- OFDM → one user at a time  
-- OFDMA → many users together  
+### Simple Difference
 
----
+- OFDM → One user transmits at a time  
+- OFDMA → Multiple users transmit together using different subcarriers
+
+### Advantage of OFDMA
+
+- Better bandwidth utilization  
+- Improved network efficiency  
+- Reduced delay in dense networks  
+- Supports many connected devices simultaneously
+
+ ---
 
 ### 9. What is the difference between MIMO and MU-MIMO?
 
@@ -193,10 +240,13 @@ Data rate depends on:
 - Bandwidth  
 - Modulation  
 - Coding rate  
-- Number of streams  
+- Number of streams
+- Guard Interval
 
 General idea:
 Data Rate ∝ Bandwidth × Modulation × Streams
+
+<img width="428" height="149" alt="image" src="https://github.com/user-attachments/assets/cca414d0-3dcd-4cb6-a7cc-aea0a2eea8f6" />
 
 
 **Example:**
@@ -205,4 +255,3 @@ Data Rate ∝ Bandwidth × Modulation × Streams
 - More MIMO streams → higher throughput
 
 ---
-
