@@ -174,7 +174,10 @@ The CAPWAP tunnel between the Access Point (AP) and Wireless LAN Controller (WLC
 ### UDP Ports Used
 
 - UDP Port 5246 → Control Tunnel  
-- UDP Port 5247 → Data Tunnel  
+- UDP Port 5247 → Data Tunnel
+
+  <img width="600" height="566" alt="image" src="https://github.com/user-attachments/assets/9aa8e3d5-90c3-451b-94e6-1d2ddd8ba616" />
+
 
 ### Tunnel Maintenance Process
 
