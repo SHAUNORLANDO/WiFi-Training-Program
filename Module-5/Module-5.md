@@ -122,7 +122,7 @@ Wi-Fi 6E gives cleaner and faster performance, but Wi-Fi 6 has better coverage
 
 Wi-Fi 7 (IEEE 802.11be) introduces several advanced technologies to improve speed, efficiency, latency, and overall wireless performance.
 
-## 320 MHz Channel Bandwidth
+#### 320 MHz Channel Bandwidth
 
 Wi-Fi 7 supports 320 MHz channel bandwidth, which is double the bandwidth of Wi-Fi 6.
 
@@ -132,7 +132,7 @@ Wi-Fi 7 supports 320 MHz channel bandwidth, which is double the bandwidth of Wi-
 - Increased network capacity  
 - Improved throughput for high-bandwidth applications
 
-# 4K QAM (4096-QAM)
+#### 4K QAM (4096-QAM)
 
 Wi-Fi 7 uses 4K QAM modulation for higher data encoding efficiency.
 
