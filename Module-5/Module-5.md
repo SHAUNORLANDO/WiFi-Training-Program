@@ -47,6 +47,8 @@ In Wi-Fi 6:
 - Channel is divided into smaller units called Resource Units (RUs)
 - Multiple devices can transmit simultaneously
 
+  <img width="1390" height="481" alt="image" src="https://github.com/user-attachments/assets/d448f315-68fc-42b8-afab-464c1663c0c0" />
+
 How it improves efficiency:
 - Reduces waiting time for devices
 - Supports multiple users at once
@@ -116,15 +118,61 @@ Wi-Fi 6E gives cleaner and faster performance, but Wi-Fi 6 has better coverage
 
 ### 6. What are the major innovations introduced in Wi-Fi 7 (802.11be)?
 
-Key innovations:
+# Key Innovations in Wi-Fi 7
 
-- 320 MHz channel bandwidth (double of Wi-Fi 6)
-- 4K QAM (higher data encoding efficiency)
-- Multi-Link Operation (MLO)
-- Extremely low latency
-- Better spectrum utilization
+Wi-Fi 7 (IEEE 802.11be) introduces several advanced technologies to improve speed, efficiency, latency, and overall wireless performance.
 
-Result:
+## 320 MHz Channel Bandwidth
+
+Wi-Fi 7 supports 320 MHz channel bandwidth, which is double the bandwidth of Wi-Fi 6.
+
+### Benefits
+
+- Higher data transmission speed  
+- Increased network capacity  
+- Improved throughput for high-bandwidth applications
+
+# 4K QAM (4096-QAM)
+
+Wi-Fi 7 uses 4K QAM modulation for higher data encoding efficiency.
+
+- More data transmitted per symbol  
+- Improved spectral efficiency  
+- Higher data rates
+
+#### Multi-Link Operation (MLO)
+
+MLO allows devices to transmit and receive data simultaneously across multiple frequency bands and channels.
+
+- Lower latency  
+- Faster communication  
+- Improved reliability and load balancing
+
+#### Extremely Low Latency
+
+Wi-Fi 7 reduces transmission delay significantly.
+
+- Better gaming performance  
+- Improved video conferencing  
+- Faster real-time communication
+
+#### Better Spectrum Utilization
+
+Wi-Fi 7 efficiently uses available wireless spectrum resources.
+
+- Reduced congestion  
+- Improved network efficiency  
+- Better performance in dense environments
+
+#### Preamble Puncturing
+
+Preamble puncturing allows Wi-Fi 7 devices to use portions of a channel even if some parts are affected by interference.
+
+- Efficient channel utilization  
+- Reduced impact of interference  
+- Improved network performance
+
+Thus, Wi-Fi 7 provides ultra-high speed, low latency, and efficient wireless communication for next-generation applications:
 - Very high throughput
 - Suitable for AR/VR, gaming, 8K streaming
 
@@ -148,9 +196,6 @@ Latency:
 Reliability:
 - If one link fails, another continues communication
 
-Simple idea:
-Using multiple internet lanes at the same time
-
 ---
 
 ### 8. What is the purpose of 802.11k and v, and how does it aid in roaming?
@@ -163,9 +208,68 @@ Using multiple internet lanes at the same time
 - Allows network to suggest optimal AP for connection
 - Helps in load balancing
 
-How it helps roaming:
-- Faster decision making
-- Client does not need to scan all channels again
+# Purpose of 802.11k and 802.11v and their Role in Roaming
+
+IEEE 802.11k and 802.11v are WLAN standards used to improve roaming efficiency and optimize wireless client connectivity.
+
+They help wireless devices move smoothly between Access Points (APs) without significant delay or connection loss.
+
+---
+
+# IEEE 802.11k
+
+802.11k helps the client identify nearby Access Points more efficiently.
+
+It provides a **Neighbor Report**, which contains information about neighboring APs such as:
+- AP identifiers
+- Operating channels
+- Signal information
+
+### Working
+
+- The client requests neighbor information from the current AP  
+- The AP sends a Neighbor Report containing nearby AP details  
+- The client uses this information to identify better APs for roaming
+
+### Advantages
+
+- Faster roaming decisions  
+- Reduces full channel scanning  
+- Improves roaming efficiency  
+- Reduces roaming delay
+
+---
+
+# IEEE 802.11v
+
+802.11v provides network-assisted roaming and client management features.
+
+It includes **BSS Transition Management**, which allows the network to suggest an optimal AP for the client.
+
+### Working of BSS Transition Management
+
+- The AP monitors network conditions and client performance  
+- The AP recommends a better neighboring AP to the client  
+- The client decides whether to move to the suggested AP
+
+### Advantages
+
+- Improves load balancing  
+- Optimizes client distribution  
+- Enhances network performance  
+- Reduces congestion
+
+---
+
+# How 802.11k and 802.11v Aid in Roaming
+
+- Faster AP selection  
+- Reduced scanning time  
+- Smooth transition between APs  
+- Lower roaming latency  
+- Improved user experience during mobility
+
+Thus, 802.11k and 802.11v improve WLAN roaming by enabling faster and smarter AP selection.
 
 ---
 
